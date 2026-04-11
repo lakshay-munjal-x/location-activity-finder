@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Travel Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Weatherwise-Travel Finder</h1>
+
+
+<button onclick="toggleTheme()"> 🌙 </button>
+
+
+<div class="top-bar">
+  <input type="text" id="cityInput" placeholder="Enter city name..." />
+  <button id="searchBtn">Search</button>
+</div>
+
+
+<div id="weatherSection"></div>
+
+
+<div class="controls">
+
+  <input type="text" placeholder="Search places..." 
+         oninput="handleSearch(this.value)" />
+
+  <button onclick="handleFilter('all')">All</button>
+  <button onclick="handleFilter('hotel')">Hotels</button>
+  <button onclick="handleFilter('park')">Parks</button>
+  <button onclick="handleFilter('restaurant')">Restaurants</button>
+  <button onclick="handleFilter('cafe')">Cafes</button>
+
+  <select onchange="handleSort(this.value)">
+    <option value="name-asc">A-Z</option>
+    <option value="name-desc">Z-A</option>
+  </select>
+
+</div>
+
+
+<div id="placesSection"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
