@@ -45,7 +45,7 @@ function fetchPlaces(lat, lon) {
   document.getElementById("placesSection").innerHTML =
     `<div class="loader"><div class="spinner"></div></div>`;
 
-  fetch("https://overpass-api.de/api/interpreter", {
+  fetch("https://overpass.kumi.systems/api/interpreter", {
     method: "POST",
     body: `
       [out:json];
